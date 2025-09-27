@@ -164,7 +164,7 @@
 
         .chart-header {
             display: flex;
-            justify-content: between;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 24px;
         }
@@ -592,7 +592,9 @@
                         <option value="flatB205">Flat B205</option>
                     </select>
                 </div>
-                <canvas id="usage-chart" width="400" height="200"></canvas>
+                <div style="height: 300px; position: relative;">
+                    <canvas id="usage-chart"></canvas>
+                </div>
             </div>
 
             <!-- Recent Alerts -->
@@ -906,7 +908,8 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: true,
+                    aspectRatio: 2,
                     plugins: {
                         legend: {
                             display: false
